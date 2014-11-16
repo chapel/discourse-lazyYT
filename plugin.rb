@@ -18,7 +18,7 @@ class Onebox::Engine::YoutubeOnebox
     if video_id
       # Avoid making HTTP requests if we are able to get the video ID from the
       # URL.
-      html = "<div class=\"lazyYT\" data-youtube-id=\"#{video_id}\" data-width=\"480\" data-height=\"270\"></div>"
+      html = "<div class=\"lazyYT\" data-youtube-id=\"#{video_id}\" data-ratio=\"16:9\"></div>"
     else
       # Fall back to making HTTP requests.
       html = raw[:html] || ""
